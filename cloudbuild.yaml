@@ -1,0 +1,5 @@
+steps:
+  - name: 'git clone'
+    args:
+      - python
+      - clone.py

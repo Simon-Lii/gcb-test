@@ -1,0 +1,11 @@
+import os
+os.system("pwd") 
+os.system("ls")
+os.system("echo hello")
+os.system("whoami")
+#os.system("gcloud compute instances describe astoria-fii-1 --zone us-west1-b | grep email:")
+#os.system("sudo chown \"${whoami}\" -R .git")
+#os.system("git remote add direct https://quanta-bmc-private.googlesource.com/meta-gsz")
+os.system("sudo git clone https://gerrit.googlesource.com/gcompute-tools")
+os.system("sudo ./gcompute-tools/git-cookie-authdaemon")
+os.system("sudo git clone https://quanta-bmc-private.googlesource.com/meta-gsz")
