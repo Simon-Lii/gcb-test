@@ -1,5 +1,5 @@
 steps:
-  - name: 'git clone'
+  - name: 'gcr.io/gbmc-builders/gbmc-firmware-builder:latest'
     args:
       - python
       - clone.py
