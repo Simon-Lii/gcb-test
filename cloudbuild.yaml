@@ -3,3 +3,6 @@ steps:
     args:
       - python
       - clone.py
+options:
+  logging: CLOUD_LOGIN_ONLY
+  
