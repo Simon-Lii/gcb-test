@@ -1,6 +1,6 @@
 steps:
-  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:alpine'
-    entrypoint: 'git'
-    args: ['clone', 'https://source.developers.google.com/p/gbmc-builders/r/meta-gsz']
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: 'gcloud'
+  args: ['source', 'repos', 'clone', 'meta-gsz']
 options:
   logging: CLOUD_LOGGING_ONLY
