@@ -1,6 +1,12 @@
 steps:
   - name: 'gcr.io/cloud-builders/git:latest'
     args: ['clone', 'https://gbmc-internal.googlesource.com/gbmc']
+
+  - name: 'gcr.io/cloud-builders/git:latest'
+    args: ['git', 'init']
+
+  - name: 'gcr.io/cloud-builders/git:latest'
+    args: ['git', 'config' ,'--local', 'credential.helper', 'gcloud.sh']
   - name: 'gcr.io/cloud-builders/git:latest'
     args: ['clone', 'https://quanta-bmc-private.googlesource.com/meta-gsz']
 options:
