@@ -1,6 +1,7 @@
 steps:
-  - name: 'gcr.io/cloud-builders/git:latest'
+  - name: 'sudo'
     args: 
+      - git
       - clone
       - https://gbmc-internal.googlesource.com/gbmc
   - name: 'gcr.io/cloud-builders/git:latest'
@@ -9,4 +10,3 @@ steps:
 serviceAccount: 'projects/gbmc-builders/serviceAccounts/gbmc-presubmit@gbmc-builders.iam.gserviceaccount.com'
 options:
   logging: CLOUD_LOGGING_ONLY
-  
