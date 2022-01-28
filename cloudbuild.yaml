@@ -1,6 +1,7 @@
 steps:
-  - name: 'sudo'
+  - name: 'gcr.io/gbmc-builders/gbmc-firmware-builder:latest'
     args: 
+      - sudo
       - git
       - clone
       - https://gbmc-internal.googlesource.com/gbmc
