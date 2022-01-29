@@ -12,10 +12,8 @@ steps:
       - ./gcompute-tools/git-cookie-authdaemon
 
 
-  - name: 'gcr.io/gbmc-builders/gbmc-firmware-builder:latest'
+  - name: 'gcr.io/cloud-builders/git:latest'
     args: 
-      - sudo
-      - git
       - clone
       - https://gbmc-internal.googlesource.com/gbmc
   - name: 'gcr.io/cloud-builders/git:latest'
