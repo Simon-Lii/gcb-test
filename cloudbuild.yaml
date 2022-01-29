@@ -12,8 +12,9 @@ steps:
       - ./gcompute-tools/git-cookie-authdaemon
 
 
-  - name: 'gcr.io/cloud-builders/git:latest'
-    args: 
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:alpine'
+    entrypoint: 'git'
+    args:
       - clone
       - https://gbmc-internal.googlesource.com/gbmc
   - name: 'gcr.io/cloud-builders/git:latest'
