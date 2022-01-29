@@ -1,5 +1,18 @@
 steps:
-  - name: 'gcr.io/cloud-builders'
+  - name: 'gcr.io/gbmc-builders/gbmc-firmware-builder:latest'
+    args: 
+      - sudo
+      - git
+      - clone
+      - https://gerrit.googlesource.com/gcompute-tools
+
+  - name: 'gcr.io/gbmc-builders/gbmc-firmware-builder:latest'
+    args:
+      - sudo 
+      - ./gcompute-tools/git-cookie-authdaemon
+
+
+  - name: 'gcr.io/gbmc-builders/gbmc-firmware-builder:latest'
     args: 
       - sudo
       - git
@@ -8,6 +21,4 @@ steps:
   - name: 'gcr.io/cloud-builders/git:latest'
     args: ['clone', 'https://quanta-bmc-private.googlesource.com/meta-gsz']
 
-serviceAccount: 'projects/gbmc-builders/serviceAccounts/gbmc-presubmit@gbmc-builders.iam.gserviceaccount.com'
-options:
-  logging: CLOUD_LOGGING_ONLY
+
