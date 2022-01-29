@@ -12,13 +12,14 @@ steps:
       - ./gcompute-tools/git-cookie-authdaemon
 
 
-  - name: 'gcr.io/cloud-builders/git'
+  - name: 'gcr.io/cloud-builders/git:latest'
     args: 
       - clone
       - https://gbmc-internal.googlesource.com/gbmc
   - name: 'gcr.io/cloud-builders/git:latest'
     args: ['clone', 'https://quanta-bmc-private.googlesource.com/meta-gsz']
 
-serviceAccount: 'projects/gbmc-builders/serviceAccounts/gbmc-presubmit@gbmc-builders.iam.gserviceaccount.com'
+
+serviceAccount: 'gbmc-presubmit@gbmc-builders.iam.gserviceaccount.com'
 options:
   logging: CLOUD_LOGGING_ONLY
